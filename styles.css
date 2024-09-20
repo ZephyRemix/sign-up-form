@@ -5,6 +5,9 @@
     font-style: normal;
 }
 
+/* * {
+    border: 1px solid yellow;
+} */
 /* css reset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -34,4 +37,55 @@ p, h1, h2, h3, h4, h5, h6 {
   
 #root, #__next {
     isolation: isolate;
+}
+
+/* form layout */
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.banner-section {
+    width: 33.3vw;
+    position: relative;
+}
+
+.hero-image {
+    background: url('assets/halie-west-25xggax4bSA-unsplash.jpg');
+    background-size: cover;
+}
+
+.logo-section {
+    position: absolute;
+    width: 33.3vw;
+    height: 20vh;
+    background-color: rgba(0,0,0,0.5);
+    top: 22.5vh;   
+
+    display: flex;
+    align-items: center;
+}
+
+h1.logo {
+    font-family: norseregular;
+    color: white;
+    margin: 0 auto;
+    align-self: center;
+    font-size: 6rem;
+}
+
+.logo::before {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    content: "";
+    background: url('assets/odin-lined.png') no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 1.5rem;
+    top: 1.2rem;
+}
+
+.form-section {
+    width: 66.6vw;
 }
